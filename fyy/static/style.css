@@ -1,0 +1,231 @@
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#2d3748;
+}
+
+/* ===========================
+   Container
+=========================== */
+
+.container{
+    width:95%;
+    max-width:900px;
+    margin:40px auto;
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.card{
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+h1,h2,h3{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+p{
+    margin:8px 0;
+}
+
+/* ===========================
+   Form
+=========================== */
+
+input{
+    width:100%;
+    padding:14px 16px;
+    border:1px solid #dcdfe4;
+    border-radius:10px;
+    outline:none;
+    transition:.3s;
+    margin-bottom:18px;
+}
+
+input:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 10px rgba(37,99,235,.15);
+}
+
+/* ===========================
+   Button
+=========================== */
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:14px 24px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:15px;
+    font-weight:600;
+}
+
+button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   Link
+=========================== */
+
+a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:600;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* ===========================
+   Alert
+=========================== */
+
+.message{
+    margin-top:20px;
+    padding:15px;
+    background:#e8f5e9;
+    color:#2e7d32;
+    border-left:5px solid #2e7d32;
+    border-radius:8px;
+}
+
+/* ===========================
+   Table
+=========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+th{
+    background:#1e40af;
+    color:white;
+    padding:16px;
+}
+
+td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+tr:hover{
+    background:#f8faff;
+}
+
+/* ===========================
+   Timeline Tracking
+=========================== */
+
+.timeline{
+    margin-top:25px;
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:18px;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:#2563eb;
+}
+
+.timeline-item{
+    position:relative;
+    padding-left:60px;
+    margin-bottom:28px;
+}
+
+.timeline-item::before{
+    content:"";
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#2563eb;
+    position:absolute;
+    left:10px;
+    top:5px;
+}
+
+.timeline-status{
+    font-size:17px;
+    font-weight:600;
+    color:#1e3a8a;
+}
+
+.timeline-time{
+    font-size:13px;
+    color:#888;
+    margin-top:5px;
+}
+
+/* ===========================
+   Badge
+=========================== */
+
+.badge{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:50px;
+    background:#2563eb;
+    color:white;
+    font-size:12px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.container{
+    width:95%;
+}
+
+.card{
+    padding:20px;
+}
+
+table{
+    font-size:13px;
+}
+
+button{
+    width:100%;
+}
+
+}

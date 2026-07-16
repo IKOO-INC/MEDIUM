@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Buat Order</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Buat Order Baru</h2>
+
+        <form method="POST">
+
+            <input
+                type="text"
+                name="tracking_code"
+                placeholder="Masukkan Kode Resi"
+                required>
+
+            <button type="submit">
+                Simpan
+            </button>
+
+        </form>
+
+        {% if message %}
+        <div class="message">
+            {{ message }}
+        </div>
+        {% endif %}
+
+        <br>
+
+        <a href="/admin/orders">
+            Lihat Semua Order
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

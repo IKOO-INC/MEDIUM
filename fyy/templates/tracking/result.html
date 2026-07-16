@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Tracking Paket</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Tracking Paket</h2>
+
+<p>
+
+Nomor Resi
+
+</p>
+
+<h3>
+
+<span class="badge">
+
+{{ order.tracking_code }}
+
+</span>
+
+</h3>
+
+<div class="timeline">
+
+{% for item in order.statuses|reverse %}
+
+<div class="timeline-item">
+
+<div class="timeline-status">
+
+{{ item.status }}
+
+</div>
+
+<div class="timeline-time">
+
+{{ item.time }}
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<br>
+
+<a href="/tracking">
+
+← Cari Resi Lagi
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

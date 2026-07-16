@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Tambah Status</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Tambah Status</h2>
+
+<p>
+
+Kode Resi
+
+</p>
+
+<h3>
+
+{{ tracking_code }}
+
+</h3>
+
+<form method="POST">
+
+<input
+
+type="text"
+
+name="status"
+
+placeholder="Masukkan Status"
+
+required>
+
+<button>
+
+Tambah Status
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

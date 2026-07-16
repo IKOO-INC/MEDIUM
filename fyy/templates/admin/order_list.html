@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Daftar Order</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Daftar Order</h2>
+
+<table>
+
+<tr>
+
+<th>No</th>
+<th>Resi</th>
+<th>Status Terakhir</th>
+<th>Aksi</th>
+
+</tr>
+
+{% for item in orders %}
+
+<tr>
+
+<td>{{ loop.index }}</td>
+
+<td>
+<span class="badge">
+{{ item.tracking_code }}
+</span>
+</td>
+
+<td>{{ item.statuses[-1].status }}</td>
+
+<td>
+
+<a href="/admin/add-status/{{ item.tracking_code }}">
+Tambah Status
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
