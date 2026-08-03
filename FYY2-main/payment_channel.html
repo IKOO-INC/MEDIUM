@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>SiApik</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="https://siapik.com/aplikasi/asset/logoicon.png?v=0.50.3">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="https://siapik.com/aplikasi//asset/personal/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://siapik.com/aplikasi//asset/personal/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://siapik.com/aplikasi//asset/personal/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://siapik.com/aplikasi//asset/personal/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://siapik.com/aplikasi//asset/personal/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://siapik.com/aplikasi//asset/personal/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="https://siapik.com/aplikasi//asset/personal/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+  <!-- Template Main CSS File -->
+  <!-- <link href="https://siapik.com/aplikasi//asset/personal/assets/css/style21.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://siapik.com/aplikasi//asset/template_akzn/style.css?v=0.50.3.0">
+
+  <!-- =======================================================
+  * Template Name: Personal - v4.9.1
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+  <script src="https://siapik.com/aplikasi/assets/sbadmin5/js/bootstrap.bundle.min.js"></script>
+  <!-- Include jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Include jquery-confirm library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js"></script>
+
+<style type="text/css">
+    body{
+        font-size:0.8rem;
+        font-family: 'Poppins', 'Open Sans', sans-serif;
+                    background-color:#f5f5f5;
+            background-image: none;
+            }
+    
+    .btn.btn-primary, .btn.btn-secondary, .btn.btn-success, .btn.btn-info, .btn.btn-warning, .btn.btn-danger, .btn.btn-light, .nav-pills .nav-link{
+      font-size: 12px !important;
+    }
+    .scroll-x {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .scroll-x > div {
+        display: inline-block;
+    }
+    .mobile-select{
+        font-size:0.8rem
+    }
+    .shadow-0{
+        box-shadow: none;
+    }
+
+    .dropdown-bare,.dropdown-bare:focus,.dropdown-bare:active{
+        border:unset;
+        box-shadow: none;
+        background-color:transparent;
+        color:#34495e;
+        font-size: smaller;
+    }
+    /* remove caret from dropdown */
+    .dropdown-bare.dropdown-toggle::after {
+        display: none;
+    }
+#loading {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: center no-repeat #ffffff91;
+}
+.btn{
+    border-radius:5px;
+    border:unset;
+}
+
+.page-link a{
+    color:#3498db;
+    text-decoration: none;
+}
+ 
+    #data-view {
+        position: relative;
+        width: 100%;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(119 119 119 / 16%);
+        z-index: 9999;
+    }
+    .loading-items {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(90deg, #d7d7d7, #aaaaaa00, #d7d7d7, #aaaaaa00);
+        background-size: 300% 300%;
+        animation: gradient-shift 4s linear infinite;
+    }
+    @keyframes gradient-shift {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+/*-- css spin --*/
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+ 
+/*-- css loader --*/
+.no-js #loader { display: none; }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+ 
+.loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid var(--primary-darker);
+    border-bottom: 10px solid var(--primary-darker);
+    width: 40px;
+    height: 40px;
+    /* left: 43.5%;
+    top: 20%; */
+    -webkit-animation: spin 2s linear infinite;
+    position: fixed;
+    animation: spin 2s linear infinite;
+}
+ 
+.textLoader{
+    position: fixed;
+    top: 56%;
+    left: 45.6%;
+    color: #34495e;
+}
+
+.btn-menu {
+    height: 2em;
+}
+
+
+.header-right-buttons .btn {
+    margin-left: auto;
+    padding: 0 10px 0 0;
+    font-size:large;
+}
+
+.fixed-footer {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* make content always show mobile */
+/* body{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 0; 
+}
+.main-content-container {
+    display: block;
+    width: 414px;
+    height: 896px;
+} */
+
+.has-error .form-control {
+    border-color: #ff0000; /* Red border color */
+}
+
+/* photoswipe */
+.pswp, .top-inset-webview {
+    margin-top: 120px;
+}
+   
+/*-- responsive --*/
+    @media screen and (max-width: 1034px){
+        .textLoader{
+            left: 46.2%;
+        }
+    }
+ 
+    @media screen and (max-width: 824px){
+        .textLoader {
+            left: 47.2%;
+        }
+        .fixed-footer{
+            height: 55px;
+        }
+    }
+ 
+    @media screen and (max-width: 732px){
+        .textLoader {
+            left: 48.2%;
+        }
+        .btn-menu {
+            height: 2.1em;
+        }
+
+        .card-body{
+            padding: 0.7rem;
+        }
+    }
+ 
+    @media screen and (max-width: 500px){
+        .loader{
+            /* left: 36.5%;; */
+        }
+        .textLoader {
+            left: 40.5%;
+        }
+    }
+ 
+    @media screen and (max-height: 432px){
+        .textLoader {
+            top: 65%;
+        }
+    }
+ 
+    @media screen and (max-height: 350px){
+        .textLoader {
+            top: 75%;
+        }
+    }
+ 
+    @media screen and (max-height: 312px){
+        .textLoader {
+            display: none;
+        }
+    }
+            body {
+            background-image: unset;
+        }
+    /*-- responsive --*/
+</style>
+ <style>
+body  {
+  /* background-image: url("https://mata.cvcma.com/aplikasi/asset/mata_bg.png"); */
+  background-size: cover;
+  background-attachment: fixed;
+  /* max-width: 500px;
+    margin: 0px auto; */
+}
+.btn-money{
+    border:1px solid #34495e;
+}
+/* Ensure the autocomplete dropdown takes the full width of the input group */
+.ui-autocomplete {
+    width: 100% !important;
+    margin-top: -1px; /* Align dropdown with input box */
+    box-sizing: border-box;
+    left: 0 !important;
+    text-align: left !important;
+}
+
+</style>
+<script data-cfasync="false" nonce="7d743980-b6c4-4acd-9b16-8f338b6b3984">try{(function(w,d){!function(mJ,mK,mL,mM){if(mJ.zaraz)console.error("zaraz is loaded twice");else{mJ[mL]=mJ[mL]||{};mJ[mL].executed=[];mJ.zaraz={deferred:[],listeners:[]};mJ.zaraz._v="20";mJ.zaraz._n="7d743980-b6c4-4acd-9b16-8f338b6b3984";mJ.zaraz.q=[];mJ.zaraz._f=function(mN){return async function(){var mO=Array.prototype.slice.call(arguments);mJ.zaraz.q.push({m:mN,a:mO})}};for(const mP of["track","set","debug"])mJ.zaraz[mP]=mJ.zaraz._f(mP);mJ.zaraz.init=()=>{var mQ=mK.getElementsByTagName(mM)[0],mR=mK.createElement(mM),mS=mK.getElementsByTagName("title")[0];mS&&(mJ[mL].t=mK.getElementsByTagName("title")[0].text);mJ[mL].x=Math.random();mJ[mL].w=mJ.screen.width;mJ[mL].h=mJ.screen.height;mJ[mL].j=mJ.innerHeight;mJ[mL].e=mJ.innerWidth;mJ[mL].l=mJ.location.href;mJ[mL].r=mK.referrer;mJ[mL].k=mJ.screen.colorDepth;mJ[mL].n=mK.characterSet;mJ[mL].o=(new Date).getTimezoneOffset();if(mJ.dataLayer)for(const mT of Object.entries(Object.entries(dataLayer).reduce((mU,mV)=>({...mU[1],...mV[1]}),{})))zaraz.set(mT[0],mT[1],{scope:"page"});mJ[mL].q=[];for(;mJ.zaraz.q.length;){const mW=mJ.zaraz.q.shift();mJ[mL].q.push(mW)}mR.defer=!0;for(const mX of[localStorage,sessionStorage])Object.keys(mX||{}).filter(mZ=>mZ.startsWith("_zaraz_")).forEach(mY=>{try{mJ[mL]["z_"+mY.slice(7)]=JSON.parse(mX.getItem(mY))}catch{mJ[mL]["z_"+mY.slice(7)]=mX.getItem(mY)}});mR.referrerPolicy="origin";mR.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(mJ[mL])));mQ.parentNode.insertBefore(mR,mQ)};["complete","interactive"].includes(mK.readyState)?zaraz.init():mJ.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async nv=>new Promise(nw=>{if(nv){nv.e&&nv.e.forEach(nx=>{try{const ny=d.querySelector("script[nonce]"),nz=ny?.nonce||ny?.getAttribute("nonce"),nA=d.createElement("script");nz&&(nA.nonce=nz);nA.innerHTML=nx;nA.onload=()=>{d.head.removeChild(nA)};d.head.appendChild(nA)}catch(nB){console.error(`Error executing script: ${nx}\n`,nB)}});Promise.allSettled((nv.f||[]).map(nC=>fetch(nC[0],nC[1])))}nw()});zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
+
+<body class="text-center " style="background-color:#fff">
+<div id="loading" class="d-flex justify-content-center align-items-center d-none">
+  <!-- <div class="loader"></div> -->
+  <div class="fixed-top container-fluid gradient-main mb-2 shadow " style="color: white;">
+            <div class="row py-3 align-items-center header-row" style="height: 80px;padding-top: 60px !important;padding-bottom: 40px !important;"> 
+                <div class="col-2" style="">
+                    <!-- <a href="" onclick="window.close();" class=""><i class="fas fa-chevron-left text-white"></i></a> -->
+                    <!-- <a href="https://siapik.com/aplikasi/" class="aloading"><i class="fas fa-arrow-left text-white"></i></a> -->
+
+                </div>
+                <div class="col-10 text-start">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <!-- <h6 class="fw-bold mb-0" id="loading-title"></h6> -->
+                            <h6 class="fw-bold mb-0" id="loading-title"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <i class="fas fa-circle-notch fa-spin fa-2x fa-fw"></i><span class="sr-only">Loading...</span>
+  <!-- text -->
+  <div class="textLoader d-none">
+  
+        <h6>Memproses...</h6>
+    
+  </div>
+</div>
+    <div class="mb-2 text-center main-content-container">
+
+        <!-- HEader -->
+        <div class="header fixed-top container-fluid gradient-main mb-2 shadow " style="color: white;">
+            <div class="row py-3 align-items-center header-row" style="height: 80px;padding-top: 60px !important;padding-bottom: 40px !important;">
+                <div class="col-2" style="">
+                    <!-- <a href="" onclick="window.close();" class=""><i class="fas fa-chevron-left text-white"></i></a> -->
+                    <a href="https://siapik.com/aplikasi/wallet/top_up" class="aloading"><i class="fas fa-arrow-left text-white"></i></a>
+
+                </div>
+                <div class="col-10 text-start">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <h6 class="fw-bold mb-0">Pilih Channel Pembayaran</h6>
+                        </div>
+                        <div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="header container-fluid pt-1 gradient-main shadow d-none" style="color: white;">
+            <div class="row pt-1 pb-2" id="header-row-rn">
+                <div class="col-10 text-start d-flex justify-content-start">
+                    <div>
+                        <img src="https://siapik.com/aplikasi/asset/logoicon.png" class="img-fluid rounded bg-white" alt="" style="max-height: 40px; padding: 2px;">
+                    </div>
+                    <div class="ms-2 d-flex flex-column align-items-start justify-content-center">
+                        <h5 class="fw-bold mb-0"></h5>
+                                                    <h6 class="fw-bold mb-0">Pilih Channel Pembayaran</h6>
+                                            </div>
+                </div>
+                <!-- <div class="col-8 text-start ms-0 ps-0">
+                    
+                </div> -->
+
+                <div class="col-2 d-flex align-items-center justify-content-center">
+         
+                    <a href="https://siapik.com/aplikasi/siswa_v2/notifikasi" class="btn btn-sm btn-primary position-relative aloading" style="background-color: unset; padding-left: 4px !important; padding-right: 4px !important;" data-title='notifikasi'>
+                    <i class="fas fa-bell" style="font-size: 20px;"></i>
+                    
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none" id="notification-badge" style="font-size: 10px;">
+                        <span id="notification-count"></span>
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                    </a>
+                
+                </div>
+
+            </div>
+        </div> 
+
+        <!-- content -->
+        <div class="container-fluid content-section" style="overflow: hidden; position: relative; margin-bottom: 20px; padding-top: 100px">
+            <div class="py-0 mt-3" style="width:100vw; margin-left: -12px;">
+                            </div>
+            <style>
+    .hidden {
+        display: none;
+    }
+
+    /* Android 15 Edge-to-Edge Support */
+    .safe-area-inset-bottom {
+        padding-bottom: env(safe-area-inset-bottom, 0);
+    }
+
+    .fixed-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+        background: white;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        padding-bottom: env(safe-area-inset-bottom, 0);
+        height: auto !important;
+    }
+
+    /* Main content padding to account for fixed footer */
+    .main-content {
+        padding-bottom: 100px;
+        padding-bottom: calc(100px + env(safe-area-inset-bottom, 0));
+    }
+
+    .channel-item {
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .channel-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border-color: #0d6efd;
+    }
+
+    .channel-item.active {
+        background: linear-gradient(135deg, #ffffff 0%, var(--primary-lighter) 100%) !important;
+        border-color: #0d6efd !important;
+        color: white !important;
+    }
+
+    .channel-item.active .btn,
+    .channel-item.active .fas {
+        color: white !important;
+    }
+
+    /* Modal styling */
+    .channel-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 1050;
+        padding-bottom: env(safe-area-inset-bottom, 0);
+    }
+
+    .channel-modal.show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        width: 90%;
+        max-width: 400px;
+        overflow: hidden;
+        animation: slideUp 0.3s ease-out;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .modal-header {
+        background: var(--primary-lighter);
+        color: white !important;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    .modal-title {
+        color: white !important;
+        font-size: 18px;
+    }
+
+    .modal-body {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .modal-footer {
+        padding: 15px 20px;
+        border-top: 1px solid #dee2e6;
+        display: flex;
+        gap: 10px;
+    }
+
+    .modal-footer .btn {
+        flex: 1;
+        padding: 12px;
+    }
+
+    .channel-icon-modal {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        border-radius: 8px;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin-bottom: 15px;
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 576px) {
+        .main-content {
+            padding-bottom: 90px;
+            padding-bottom: calc(90px + env(safe-area-inset-bottom, 0));
+        }
+
+        .fixed-footer {
+            padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0)) 16px;
+        }
+
+        .modal-content {
+            width: 95%;
+            margin: 20px;
+        }
+    }
+</style>
+
+<!-- Channel Selection Modal -->
+<div class="channel-modal" id="channelModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title mb-0">Konfirmasi Pilihan</h5>
+        </div>
+        <div class="modal-body">
+            <img id="modalChannelIcon" src="" alt="" class="channel-icon-modal">
+            <h6 id="modalChannelName" class="mb-3"></h6>
+            <p class="text-muted mb-0">Apakah Anda yakin ingin melanjutkan dengan channel pembayaran ini?</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="modalCancel">Batal</button>
+            <button type="button" class="btn btn-primary" id="modalContinue">Lanjutkan</button>
+        </div>
+    </div>
+</div>
+
+<div class="container main-content mb-5 p-3 shadow rounded" style="background-color: aliceblue !important;">
+        
+    
+        <h5 style="font-size: 1.1em;font-weight: 600;">ATM / MOBILE / INTERNET BANKING</h5>
+                    <p class="ms-2 me-2 text-danger">Biaya Admin Rp. 4.000 akan ditambahkan ke nominal yang harus dibayar (BCA Rp.5.000)</p>
+                <div class="" style="">
+        <!-- <div class="" style="max-height: 200px;overflow-y: auto;"> -->
+            
+                                        <div class="card mt-1  channel-item" data-channel-code="014" data-channel-type="va" data-channel-name="BCA">
+                <div class="card-body position-relative shadow">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <img src="https://siapik.com/aplikasi/asset/bank_icon/2425807_asia_bank_bca_central_indonesian_icon.svg" alt="" height="40px" class="img-fluid">
+                        </div>
+                        <div class="col-7 text-start">
+                            <!-- <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="014">BCA </button> -->
+                            <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="014">BCA</button>
+                        </div>
+                        <!-- <div class="col-2">
+                            <i class="fas fa-chevron-right"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+                                        <div class="card mt-1  channel-item" data-channel-code="002" data-channel-type="va" data-channel-name="BRI">
+                <div class="card-body position-relative shadow">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <img src="https://siapik.com/aplikasi/asset/bank_icon/2425806_bank_bri_indonesia_indonesian_rakyat_icon.svg" alt="" height="40px" class="img-fluid">
+                        </div>
+                        <div class="col-7 text-start">
+                            <!-- <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="002">BRI  <span class="text-danger">Gangguan</span></button> -->
+                            <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="002">BRI</button>
+                        </div>
+                        <!-- <div class="col-2">
+                            <i class="fas fa-chevron-right"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+                                        <div class="card mt-1 hidden channel-item" data-channel-code="009" data-channel-type="va" data-channel-name="BNI">
+                <div class="card-body position-relative shadow">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <img src="https://siapik.com/aplikasi/asset/bank_icon/2425812_bank_bni_indonesia_indonesian_negara_icon.svg" alt="" height="40px" class="img-fluid">
+                        </div>
+                        <div class="col-7 text-start">
+                            <!-- <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="009">BNI </button> -->
+                            <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="009">BNI</button>
+                        </div>
+                        <!-- <div class="col-2">
+                            <i class="fas fa-chevron-right"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+                                        <div class="card mt-1 hidden channel-item" data-channel-code="008" data-channel-type="va" data-channel-name="MANDIRI">
+                <div class="card-body position-relative shadow">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <img src="https://siapik.com/aplikasi/asset/bank_icon/2425804_bank_indonesia_mandiri_icon.svg" alt="" height="40px" class="img-fluid">
+                        </div>
+                        <div class="col-7 text-start">
+                            <!-- <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="008">MANDIRI </button> -->
+                            <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="008">MANDIRI</button>
+                        </div>
+                        <!-- <div class="col-2">
+                            <i class="fas fa-chevron-right"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+                                        <div class="card mt-1 hidden channel-item" data-channel-code="013" data-channel-type="va" data-channel-name="Permata">
+                <div class="card-body position-relative shadow">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <img src="https://siapik.com/aplikasi/asset/bank_icon/2425815_bank_indonesia_permata_permatabank_syariah_icon.svg" alt="" height="40px" class="img-fluid">
+                        </div>
+                        <div class="col-7 text-start">
+                            <!-- <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="013">Permata </button> -->
+                            <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="013">Permata</button>
+                        </div>
+                        <!-- <div class="col-2">
+                            <i class="fas fa-chevron-right"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+                                        <div class="card mt-1 hidden channel-item" data-channel-code="022" data-channel-type="va" data-channel-name="CIMB">
+                <div class="card-body position-relative shadow">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <img src="https://siapik.com/aplikasi/asset/bank_icon/2425813_bank_bankers_cimb_commerce_indonesian_icon.svg" alt="" height="40px" class="img-fluid">
+                        </div>
+                        <div class="col-7 text-start">
+                            <!-- <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="022">CIMB </button> -->
+                            <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="022">CIMB</button>
+                        </div>
+                        <!-- <div class="col-2">
+                            <i class="fas fa-chevron-right"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+                                        <div class="card mt-1 hidden channel-item" data-channel-code="011" data-channel-type="va" data-channel-name="DANAMON">
+                <div class="card-body position-relative shadow">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <img src="https://siapik.com/aplikasi/asset/bank_icon/bank-danamon-vector-logo.svg" alt="" height="40px" class="img-fluid">
+                        </div>
+                        <div class="col-7 text-start">
+                            <!-- <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="011">DANAMON </button> -->
+                            <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="011">DANAMON</button>
+                        </div>
+                        <!-- <div class="col-2">
+                            <i class="fas fa-chevron-right"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+                                        <div class="card mt-1 hidden channel-item" data-channel-code="451" data-channel-type="va" data-channel-name="BANK BSI">
+                <div class="card-body position-relative shadow">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <img src="https://siapik.com/aplikasi/asset/bank_icon/Bank_Syariah_Indonesia.svg" alt="" height="40px" class="img-fluid">
+                        </div>
+                        <div class="col-7 text-start">
+                            <!-- <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="451">BANK BSI </button> -->
+                            <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343" class="stretched-link ps-3" name="channel_code" value="451">BANK BSI</button>
+                        </div>
+                        <!-- <div class="col-2">
+                            <i class="fas fa-chevron-right"></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+                        <div class="card mt-1">
+                <div class="card-body position-relative shadow">
+                    <div class="row align-items-center">
+                        <div class="col-2">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div class="col-8 text-start">
+                            <button class="see-more stretched-link ps-3" style="border:unset;background-color:unset;font-size:1.1em;font-weight:600;color:#434343">Lihat Bank Lain</button>
+                        </div>
+                        <div class="col-2">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+
+        </div>
+
+    
+    
+        <h5 class="mt-5">QRIS</h5>
+                    <p class="text-danger">biaya admin 0.7% akan ditambahkan</p>
+                <div class="" style="">
+                        <div class="card mt-1 channel-item" data-channel-code="QRIS" data-channel-type="qris">
+                <div class="card-body position-relative shadow">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <img src="https://siapik.com/aplikasi/asset/bank_icon/qris.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-7 text-start">
+                            <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600" class="stretched-link" name="channel_code" value="QRIS">QRIS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+
+        
+            <h5 class="mt-5">AGEN RETAIL</h5>
+                    <p class="text-danger">Biaya Admin Rp. 4.000 akan ditambahkan ke nominal yang harus dibayar (*exclude fee Indomaret & Alfamart)</p>
+                <div style="">
+                        <div class="card mt-1 channel-item" data-channel-code="ALFAMART" data-channel-type="retail">
+                <div class="card-body position-relative shadow">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <img src="https://siapik.com/aplikasi/asset/bank_icon/Logo Alfamart (PNG-480p) - FileVector69.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-7 text-start">
+                            <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600" class="stretched-link" name="channel_code" value="ALFAMART">ALFAMART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="card mt-1 channel-item" data-channel-code="INDOMARET" data-channel-type="retail">
+                <div class="card-body position-relative shadow">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <img src="https://siapik.com/aplikasi/asset/bank_icon/Logo Indomaret (SVG-480p) - FileVector69 (1).svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-7 text-start">
+                            <button style="border:unset;background-color:unset;font-size:1.1em;font-weight:600" class="stretched-link" name="channel_code" value="INDOMARET">INDOMARET</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+        <div class="mb-5"> 
+            <p class="text-danger mt-1">* fee Indomaret & Alfamart memiliki kisaran harga 3000 Rupiah</p>
+        </div>
+    </div>
+
+    
+    <!-- Fixed Footer with Android 15 Edge-to-Edge Support -->
+<div class="fixed-footer safe-area-inset-bottom">
+    <div class="container-fluid py-3">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <a href="https://siapik.com/aplikasi/home"
+                   class="btn btn-outline-danger w-100 d-flex align-items-center justify-content-center">
+                    <i class="fas fa-times me-2"></i>
+                    Batal
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <form action="https://siapik.com/aplikasi/wallet/create_transaction" method="post" id="form-checkout">
+        <input type="hidden" name="csrf_token_SiApik" value="93e2f989673ceacd76e9e2fda3533fa1">
+        <input type="hidden" name="amount" value="70000">
+        <input type="hidden" name="package_id" value="">
+        <input type="hidden" name="channel_code" value="">
+        <input type="hidden" name="channel_type" value="">
+    </form>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let selectedChannelCode = null;
+        let selectedChannelType = null;
+        let selectedChannelName = null;
+        let selectedChannelIcon = null;
+
+        // Modal elements
+        const modal = document.getElementById('channelModal');
+        const modalChannelIcon = document.getElementById('modalChannelIcon');
+        const modalChannelName = document.getElementById('modalChannelName');
+        const modalCancel = document.getElementById('modalCancel');
+        const modalContinue = document.getElementById('modalContinue');
+
+        // Enhanced "See More" functionality
+        const seeMoreBtn = document.querySelector('.see-more');
+        const hiddenContents = document.querySelectorAll('.hidden');
+
+        if (seeMoreBtn && hiddenContents.length > 0) {
+            seeMoreBtn.addEventListener('click', function() {
+                hiddenContents.forEach(content => {
+                    content.classList.toggle('hidden');
+                });
+                this.textContent = hiddenContents[0].classList.contains('hidden') ? 'Lihat bank lain' : 'Lihat lebih sedikit';
+            });
+        }
+
+        // Channel item click handler
+        const channelItems = document.querySelectorAll('.channel-item');
+
+        channelItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // Get channel data
+                selectedChannelCode = this.dataset.channelCode;
+                selectedChannelType = this.dataset.channelType;
+                selectedChannelName = this.dataset.channelName;
+
+                // Get channel icon
+                const icon = this.querySelector('img');
+                selectedChannelIcon = icon ? icon.src : '';
+
+                // Update modal content
+                modalChannelIcon.src = selectedChannelIcon;
+                modalChannelIcon.alt = selectedChannelName;
+                modalChannelName.textContent = selectedChannelName;
+
+                // Show modal
+                modal.classList.add('show');
+            });
+        });
+
+        // Modal cancel button - just close modal
+        modalCancel.addEventListener('click', function() {
+            modal.classList.remove('show');
+            // Reset selection
+            selectedChannelCode = null;
+            selectedChannelType = null;
+            selectedChannelName = null;
+            selectedChannelIcon = null;
+        });
+
+        // Modal continue button - submit form
+        modalContinue.addEventListener('click', function() {
+            if (!selectedChannelCode || !selectedChannelType) {
+                alert('Pilih Channel Pembayaran terlebih dahulu');
+                return false;
+            }
+
+            // Update form and submit
+            const form = document.getElementById('form-checkout');
+            if (form) {
+                form.querySelector('input[name="channel_code"]').value = selectedChannelCode;
+                form.querySelector('input[name="channel_type"]').value = selectedChannelType;
+
+                // Close modal first
+                modal.classList.remove('show');
+
+                // Add loading state to continue button
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Memproses...';
+                this.disabled = true;
+
+                // Submit form with slight delay for visual feedback
+                setTimeout(() => {
+                    form.submit();
+                }, 500);
+            }
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+                // Reset selection
+                selectedChannelCode = null;
+                selectedChannelType = null;
+                selectedChannelName = null;
+                selectedChannelIcon = null;
+            }
+        });
+
+        // Add viewport height detection for better mobile experience
+        function setViewportHeight() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+
+        setViewportHeight();
+        window.addEventListener('resize', setViewportHeight);
+
+        // Handle Android 15 edge-to-edge detection
+        function detectEdgeToEdge() {
+            const safeAreaBottom = getComputedStyle(document.documentElement)
+                .getPropertyValue('safe-area-inset-bottom');
+
+            if (safeAreaBottom && safeAreaBottom !== '0px') {
+                document.body.classList.add('edge-to-edge-mode');
+            }
+        }
+
+        detectEdgeToEdge();
+        window.addEventListener('orientationchange', detectEdgeToEdge);
+
+        // Add keyboard support (ESC to close modal)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('show')) {
+                modal.classList.remove('show');
+                // Reset selection
+                selectedChannelCode = null;
+                selectedChannelType = null;
+                selectedChannelName = null;
+                selectedChannelIcon = null;
+            }
+        });
+    });
+
+    // Fallback for jQuery if needed
+    if (typeof $ !== 'undefined') {
+        $(function() {
+            var selectedChannelCode = null;
+            var selectedChannelType = null;
+
+            $('form').submit(function() {
+                $('#loading').removeClass('d-none');
+            });
+
+            $('.channel-item').click(function() {
+                $('.channel-item').removeClass('active');
+                $(this).addClass('active');
+                selectedChannelCode = $(this).data('channel-code');
+                selectedChannelType = $(this).data('channel-type');
+            });
+
+            $('#btn-checkout').click(function() {
+                if (!selectedChannelCode || !selectedChannelType) {
+                    alert('Pilih Channel Pembayaran terlebih dahulu');
+                    return false;
+                }
+
+                $('#form-checkout').find('input[name="channel_code"]').val(selectedChannelCode);
+                $('#form-checkout').find('input[name="channel_type"]').val(selectedChannelType);
+                $('#form-checkout').submit();
+            });
+        });
+    }
+</script>                        <!-- end footer -->
+        </div>
+    </div>
+
+        
+<script type="text/javascript" src="https://siapik.com/aplikasi/assets/sbadmin5/js/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/id.min.js"></script>
+
+<!-- select2 -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script type="text/javascript" src="https://siapik.com/aplikasi/assets/sbadmin5/js/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://siapik.com/aplikasi/assets/sbadmin5/css/daterangepicker.css" />
+
+<!-- load daterangepicker siapik -->
+<!-- <script src="https://siapik.com/aplikasi/asset/js/daterangepicker.js?v=0.50.3"></script> -->
+<!-- load datatableAddFilter -->
+<!-- <script src="https://siapik.com/aplikasi/asset/js/datatableAddFilter.js?v=0.50.3"></script> -->
+
+<script src="https://siapik.com/aplikasi/asset/js/siswa.js?v=0.50.3"></script>
+<script src="https://siapik.com/aplikasi/asset/template_akzn/custom.js?v=0.50.3"></script>
+
+<script>     
+    var base_url="https://siapik.com/aplikasi/";     
+    var CONST_BASE_URL = base_url;
+    var CONST_TA_ACTIVE = 'Array';      
+    function JQalert(message=null, status = null){
+        let title;
+        let type;
+        if (status != null) {
+            if (status == 'success') {
+                title = '<h5 class="text-success">' + 'Aksi Berhasil!' + '</h5>';
+                type = 'green';
+            } else if (status == 'danger' || status == 'error' || status == 'red') {
+                title = '<h5 class="text-danger">' + 'Aksi Gagal!' + '</h5>';
+                type = 'red';
+            } else if (status == 'warning' || status == 'yellow') {
+                title = '<h5 class="text-warning">' + 'Peringatan!' + '</h5>';
+                type = 'yellow';
+            } else if (status == 'info' || status == 'blue') {
+                title = '<h5 class="text-info">' + 'Informasi!' + '</h5>';
+                type = 'blue';
+            } else {
+                title = '<h5 class="text-danger">' + 'Undefined' + '</h5>';
+                type = 'red';
+            }
+        }
+
+        $.alert({
+            title: title ? title : 'Notifikasi',
+            content: (message) ? message : 'No alert message is defined',
+            type: type ? type : 'blue',
+            buttons: {
+                ok: function () {
+                // Do something when user clicks OK button
+                }
+            }
+        });
+    }
+
+            function formatNumber(number) {
+                // Check if the number is negative
+                let isNegative = false;
+                if (number < 0) {
+                    isNegative = true;
+                    number = Math.abs(number);
+                }
+
+                // Get the input value and remove all non-numeric characters
+                let value = String(number).replace(/\D/g, '');
+
+                // Format the value with commas
+                value = new Intl.NumberFormat().format(value);
+
+                // Add parentheses around the value if the number was negative
+                if (isNegative) {
+                    value = '(-' + value + ')';
+                }
+
+                return value;
+            }
+            
+</script>
+
+<script>
+    $(function(){
+        $('a').on('click',function(){
+            if ($(this).hasClass('aloading')) {
+
+                if ($(this).attr('data-title')) {
+                    $('#loading-title').text($(this).attr('data-title'))
+                } else {
+                    $('#loading-title').text('')
+                }
+
+                $('#loading').removeClass('d-none')
+
+                // hide loading if 30s no activity
+                setTimeout(function(){
+                    $('#loading').addClass('d-none')
+                },30000)
+            }
+        });
+
+        $('.formatNumber').on('input', function() {
+            // max 1 milyar
+            if ($(this).val().length > 12){ 
+                $(this).val($(this).val().substr(0,12));
+                JQalert('Maksimal tercapai');
+            }
+            $(this).val(formatNumber($(this).val()))
+        });
+
+        // $.ajax({
+        //     url: 'https://siapik.com/aplikasi/siswa_v2/notifikasi/get_unread',
+        //     type: 'GET',
+        //     dataType: 'JSON',
+        //     success: function(response) {
+        //         if (response.status === 'success') {
+        //             const unreadCount = response.data;
+        //             if (unreadCount > 0) {
+        //                 $('#notification-badge').removeClass('d-none');
+        //                 $('#notification-count').text(unreadCount);
+        //             }
+        //         }
+        //     }
+        // });
+
+        // open external url through react native webview or regular window.open
+        openExternalUrl = function(url) {
+            if (window.ReactNativeWebView) {
+                window.ReactNativeWebView.postMessage(JSON.stringify({
+                    type: 'openExternalUrl',
+                    url: url
+                }));
+            } else {
+                window.open(url, '_blank');
+            }
+        };
+
+
+        if (window.ReactNativeWebView) {
+            let isSuccessLogin =  false;
+            if (isSuccessLogin) {
+                // window.ReactNativeWebView.postMessage("Login successful")
+                window.ReactNativeWebView.postMessage(JSON.stringify({
+                    type: 'login',
+                    message: 'Login successful',
+                    authTokenReference: '',
+                }));
+            }
+
+            let backUrl = "wallet/top_up";
+            if (backUrl && backUrl !== '') {
+                window.ReactNativeWebView.postMessage(JSON.stringify({
+                    type: 'backUrl',
+                    backUrl: backUrl,
+                }));
+            } else {
+                window.ReactNativeWebView.postMessage(JSON.stringify({
+                    type: 'backUrl',
+                    backUrl: 'home',
+                }));
+            }
+
+            
+            // for page refreshcontrol
+
+            function _handlePostScrollMessage(isAtTop) {
+                if (window.ReactNativeWebView) {
+                        window.ReactNativeWebView.postMessage(
+                            JSON.stringify({
+                                type: 'refresh',
+                                state: isAtTop
+                            })
+                        );
+                    }
+            }
+
+            function handleScroll($element) {
+                $element.scroll(function() {
+                    const isAtTop = $(this).scrollTop() === 0;
+                    console.log(isAtTop ? "At the top" : "Not at the top");
+                    _handlePostScrollMessage(isAtTop);
+                    
+                });
+            }
+
+            let canReloadRN = 1;
+            if (canReloadRN == 1) {
+
+                // alert('canReloadRN 1');
+
+                // Apply the scroll handler to the window (main page)
+                handleScroll($(window));
+                
+                // Apply the scroll handler to the modal content
+                handleScroll($('.modal-body'));
+                _handlePostScrollMessage(true);
+            } else {
+                // alert('canReloadRN 2');
+
+                _handlePostScrollMessage(false)
+            }
+
+            // add padding-top to header-row-rn equal to status bar height
+            function setHeaderPadding() {
+                // i think this is now unnecessary because we direclty add padding-top to header-row-rn. and remove it instead if not detected as rn, on {else} below
+                const statusBarHeight = 40; // Adjust this value based on the actual status bar height
+                $('#header-row-rn')[0].style.setProperty('padding-top', statusBarHeight + 'px', 'important');
+            }
+
+            // Call the function to set the padding
+            setHeaderPadding();
+        } else {
+            // if not react native, remove padding-top from header class
+            $('.header-row').css('padding-top', '30px', 'important');
+            // $('.header-row').css('padding-bottom', '30px', 'important');
+            
+            // $('.content-section .text-start:first-child').css('margin-bottom', '20px', 'important');
+            // $('.content-section .text-start div').css('margin', '16px -15px');
+            // $('.content-section .text-start > div:first-child').css({
+            //     'margin': '-16px -15px',
+            //     'margin-bottom': '20px',
+            //     'padding-bottom' : 'unset',
+            // });
+            let is_header = true;
+            if (is_header) {
+                $('.header-row').css('padding-bottom', '30px', 'important');
+                $('.content-section').css('margin', '-20px 0', 'important');
+                $('.content-section .text-start > .content-gradient:first-child').css({
+                    'height':'20vh',
+                    'margin-top': '-16px'
+                })
+                
+            }
+        }
+
+    })
+</script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c58b2d1acb2a488e82e6c77a87e8859a","r":1}' crossorigin="anonymous"></script>
+</body>
+
+
+</html>

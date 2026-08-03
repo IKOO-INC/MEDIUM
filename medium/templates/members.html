@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="mb-4">Kelola Anggota Tim</h2>
+
+<div class="row mb-4">
+    <div class="col-md-7">
+        <div class="card border-primary">
+            <div class="card-body">
+                <form method="POST" class="row g-2">
+                    <input type="hidden" name="action" value="add">
+                    <div class="col-md-5">
+                        <input type="text" name="member_name" class="form-control" placeholder="Nama Anggota Baru" required>
+                    </div>
+                    <div class="col-md-5">
+                        <select name="member_role" class="form-select" required>
+                            <option value="">-- Pilih Role --</option>
+                            <option value="Editor">Editor</option>
+                            <option value="Videografer">Videografer</option>
+                            <option value="Fotografer">Fotografer</option>
+                            <option value="Livestreamer">Livestreamer</option>
+                            <option value="Tim Creative">Tim Creative</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary w-100">Tambah</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h4>Daftar Anggota & Role</h4>
+<ul class="list-group w-75">
+    {% for member in members %}
+        <!-- Cek apakah data berupa format objek (baru) atau teks biasa (lama) -->
+        {% set m_name = member.name if member is mapping else member %}
+        {% set m_role = member.role if member is mapping else 'Belum di-set' %}
+
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+            <strong>{{ m_name }}</strong> 
+            <span class="badge bg-secondary ms-2">{{ m_role }}</span>
+        </div>
+        <form method="POST" style="margin: 0;">
+            <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="member_name" value="{{ m_name }}">
+            <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Hapus {{ m_name }} dari tim?')">Hapus</button>
+        </form>
+    </li>
+    {% else %}
+    <li class="list-group-item text-muted">Belum ada anggota tim. Silakan tambahkan.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

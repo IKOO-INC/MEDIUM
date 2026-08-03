@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard Admin</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="dashboard-header">
+
+<h2>Daftar Order</h2>
+
+<a class="btn-primary" href="/admin/create">
+
++ Order Baru
+
+</a>
+
+</div>
+<div class="stats-grid">
+
+<div class="stats-card">
+
+<h2>{{ total_order }}</h2>
+
+<p>Total Order</p>
+
+</div>
+
+<div class="stats-card">
+
+<h2>{{ progress_order }}</h2>
+
+<p>Progress</p>
+
+</div>
+
+<div class="stats-card">
+
+<h2>{{ selesai_order }}</h2>
+
+<p>Selesai</p>
+
+</div>
+
+<div class="stats-card">
+
+<h2><b><a href="/admin/chats">{{ unread_chat }}</a></b></h2>
+
+<p>Chat Baru</p>
+
+</div>
+
+</div>
+
+<br>
+<input
+type="text"
+id="searchInput"
+placeholder="Cari Resi / Customer / Produk..."
+class="search-box">
+
+<div class="orders-grid">
+
+{% for item in orders %}
+
+<div class="order-card">
+
+<div class="order-top">
+
+<span class="badge">
+
+{{ item.tracking_code }}
+
+</span>
+
+<span class="payment {{ item.payment_status|lower|replace(' ','-') }}">
+
+{{ item.payment_status }}
+
+</span>
+
+</div>
+
+<h3>
+
+{{ item.customer_name }}
+
+</h3>
+
+<p>
+
+{{ item.product_name }}
+
+</p>
+
+<div class="progress">
+
+<div class="progress-bar"
+
+style="width:{{ item.progress }}%;">
+
+{{ item.progress }}%
+
+</div>
+
+</div>
+
+<div class="order-info">
+
+<p>
+
+<b>Deadline</b>
+
+{{ item.deadline }}
+
+</p>
+
+<p>
+
+<b>Harga</b>
+
+Rp {{ "{:,}".format(item.product_price).replace(",",".") }}
+
+</p>
+
+<p>
+
+<b>Status</b>
+
+{{ item.statuses[-1].status }}
+
+</p>
+
+</div>
+
+<div class="action-buttons">
+
+<a href="/admin/add-status/{{ item.tracking_code }}">
+
+Status
+
+</a>
+
+<a href="/admin/order/{{ item.tracking_code }}">
+
+Detail
+
+</a>
+
+<a href="#">
+
+Edit
+
+</a>
+
+<a class="danger" href="#">
+
+Hapus
+
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const search=document.getElementById("searchInput");
+
+search.addEventListener("keyup",()=>{
+
+const keyword=search.value.toLowerCase();
+
+document.querySelectorAll(".order-card").forEach(card=>{
+
+card.style.display=
+
+card.innerText.toLowerCase().includes(keyword)
+
+?"block":"none";
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>

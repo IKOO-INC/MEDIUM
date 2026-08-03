@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="mb-4">⚙️ Database Console (Migration Tool)</h2>
+
+{% if message %}
+<div class="alert alert-{{ status_type }} alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card border-warning mb-4">
+            <div class="card-header bg-warning text-dark fw-bold">
+                Broadcast Key Baru (Mass Update)
+            </div>
+            <div class="card-body">
+                <p class="text-muted small">Gunakan alat ini untuk menyuntikkan properti/kolom baru ke semua data yang sudah ada (Misal: Menambah kolom "No HP" atau "Gaji" ke semua anggota).</p>
+                
+                <form method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Target Data</label>
+                        <select name="target" class="form-select" required>
+                            <option value="members">Data Anggota Tim (User)</option>
+                            <option value="finance">Data Kas (Transaksi)</option>
+                            <option value="attendance">Data Absensi</option>
+                            <option value="tasks">Data Tasks / Project</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Nama Key / Field Baru (tanpa spasi)</label>
+                        <input type="text" name="new_key" class="form-control" placeholder="contoh: no_hp, gaji_pokok, shift_kerja" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label">Nilai Default Awal</label>
+                        <input type="text" name="default_val" class="form-control" placeholder="contoh: -, 0, atau Belum Diisi" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-warning w-100 fw-bold" onclick="return confirm('Yakin ingin membroadcast key ini ke database? Perubahan ini bersifat permanen.')">
+                        Jalankan Migrasi Database
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="alert alert-info">
+            <h5 class="alert-heading">Cara Kerja Console</h5>
+            <p>Jika Anda memilih target <strong>Data Anggota Tim</strong> dan mengisi Key: <code>no_hp</code> dengan default <code>-</code>, maka struktur database anggota yang tadinya:</p>
+            <code>{"name": "Budi", "role": "Editor"}</code><br><br>
+            <p>Akan otomatis di-update menjadi:</p>
+            <code>{"name": "Budi", "role": "Editor", "no_hp": "-"}</code>
+            <hr>
+            <p class="mb-0 small">Sangat berguna jika Anda mengembangkan webnya nanti dan butuh variabel baru tanpa harus menghapus data database dari awal (drop database).</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

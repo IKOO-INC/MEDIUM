@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="mb-4">Dashboard Tim</h2>
+
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Total Kas Tim</h5>
+                <h3 class="card-text">Rp {{ "{:,.0f}".format(balance) }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Total Pemasukan</h5>
+                <h3 class="card-text">Rp {{ "{:,.0f}".format(total_in) }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-danger mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Total Pengeluaran</h5>
+                <h3 class="card-text">Rp {{ "{:,.0f}".format(total_out) }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h4>Preview Task Aktif</h4>
+<ul class="list-group">
+    {% for task in tasks %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ task.title }}
+            <span class="badge bg-warning text-dark rounded-pill">Active</span>
+        </li>
+    {% else %}
+        <li class="list-group-item text-muted">Tidak ada task aktif.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

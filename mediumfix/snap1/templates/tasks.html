@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Projects{% endblock %}
+{% block breadcrumb %}Projects{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-text">
+        <span class="eyebrow">Project Management</span>
+        <h1 class="hero-title">Daftar <span class="accent">Project / Tasks</span></h1>
+        <p class="hero-sub">Buat task baru, pantau pekerjaan aktif, dan arsipkan pekerjaan yang sudah selesai.</p>
+    </div>
+</section>
+
+<section class="card section-gap">
+    <div class="card-head"><div class="card-title-wrap"><span class="eyebrow">New Task</span><h2 class="card-title">Tambah Task</h2></div></div>
+    <form method="POST">
+        <div class="form-grid">
+            <div class="field"><label class="field-label" for="title">Judul task</label><input class="input" id="title" type="text" name="title" placeholder="Judul task" required></div>
+            <div class="field"><label class="field-label" for="description">Deskripsi</label><input class="input" id="description" type="text" name="description" placeholder="Deskripsi task" required></div>
+        </div>
+        <div class="form-actions"><span class="spacer"></span><button type="submit" class="btn btn--primary">Tambah Task</button></div>
+    </form>
+</section>
+
+<div class="grid">
+    <section class="col-6 card">
+        <div class="card-head">
+            <div class="card-title-wrap"><span class="eyebrow">In Progress</span><h2 class="card-title">Active Tasks</h2></div>
+            <span class="badge warning">{{ active_tasks|length }} aktif</span>
+        </div>
+        <div class="project-list">
+            {% for task in active_tasks %}
+            <article class="project-item">
+                <div class="project-item-head">
+                    <div><span class="badge warning dot">Active</span><h3>{{ task.title }}</h3></div>
+                    <a href="{{ url_for('complete_task', task_id=task._id) }}" class="btn btn--success btn--small">Mark as Done</a>
+                </div>
+                <p>{{ task.description }}</p>
+                <span class="project-date">Dibuat: {{ task.date_created.strftime('%Y-%m-%d') }}</span>
+            </article>
+            {% else %}
+            <div class="empty-state compact"><strong>Tidak ada task aktif</strong><span>Task baru akan masuk ke bagian ini.</span></div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="col-6 card">
+        <div class="card-head">
+            <div class="card-title-wrap"><span class="eyebrow">Completed</span><h2 class="card-title">Passed Tasks</h2></div>
+            <span class="badge success">{{ passed_tasks|length }} selesai</span>
+        </div>
+        <div class="project-list">
+            {% for task in passed_tasks %}
+            <article class="project-item is-passed">
+                <div class="project-item-head"><div><span class="badge success dot">Passed</span><h3>{{ task.title }}</h3></div></div>
+                <p>{{ task.description }}</p>
+            </article>
+            {% else %}
+            <div class="empty-state compact"><strong>Belum ada task selesai</strong><span>Task yang ditandai selesai akan pindah ke sini.</span></div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="mb-4">Assets & Dokumentasi</h2>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <!-- enctype="multipart/form-data" WAJIB untuk upload file -->
+        <form method="POST" enctype="multipart/form-data" class="d-flex gap-3 align-items-center">
+            <input type="file" name="file" class="form-control" required>
+            <input type="text" name="description" class="form-control" placeholder="Keterangan file (contoh: Logo V1)">
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    {% for file in files %}
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <!-- Menampilkan gambar/file -->
+            <img src="{{ url_for('static', filename='uploads/' + file.filename) }}" class="card-img-top" alt="asset" style="height: 150px; object-fit: cover;">
+            <div class="card-body">
+                <h6 class="card-title">{{ file.filename }}</h6>
+                <p class="card-text text-muted small">{{ file.description }}</p>
+            </div>
+            <div class="card-footer text-center">
+                <a href="{{ url_for('static', filename='uploads/' + file.filename) }}" target="_blank" class="btn btn-sm btn-outline-primary">Lihat File</a>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <p class="text-muted">Belum ada assets yang diunggah.</p>
+    {% endfor %}
+</div>
+{% endblock %}

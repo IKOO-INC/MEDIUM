@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Chat Admin</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Chat Admin</h2>
+
+<p>
+
+<b>Resi :</b>
+
+{{ order.tracking_code }}
+
+</p>
+
+<p>
+
+<b>Customer :</b>
+
+{{ order.customer_name }}
+
+</p>
+
+<hr>
+
+<div class="chat-box" id="chatBox">
+
+{% if chat_messages %}
+
+    {% for chat in chat_messages %}
+
+    {% if chat.sender=="customer" %}
+
+    <div class="customer-message">
+
+        <div>
+
+            {{ chat.message }}
+
+        </div>
+
+        <small>
+
+            {{ chat.time.strftime("%H:%M") }}
+
+        </small>
+
+    </div>
+
+    {% else %}
+
+    <div class="admin-message">
+
+        <div>
+
+            {{ chat.message }}
+
+        </div>
+
+        <small>
+
+            {{ chat.time.strftime("%H:%M") }}
+
+        </small>
+
+    </div>
+
+    {% endif %}
+
+{% endfor %}
+
+{% else %}
+
+<p>
+
+Belum ada percakapan.
+
+</p>
+
+{% endif %}
+
+</div>
+
+<form method="POST" id="chatForm">
+
+<input
+type="text"
+id="messageInput"
+name="message"
+placeholder="Ketik pesan..."
+required>
+
+<button type="submit">
+
+Kirim
+
+</button>
+
+</form>
+
+<br>
+
+<a href="/tracking">
+
+← Kembali
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+<script>
+
+const chatBox = document.getElementById("chatBox");
+const chatForm = document.getElementById("chatForm");
+const messageInput = document.getElementById("messageInput");
+
+let lastId = "";
+
+// ======================
+// Load Chat Baru
+// ======================
+async function loadChat(){
+
+    let url = "/chat-api/{{ order.tracking_code }}";
+
+    if(lastId){
+
+        url += "?after=" + lastId;
+
+    }
+
+    const res = await fetch(url);
+
+    const chats = await res.json();
+
+    chats.forEach(chat=>{
+
+        lastId = chat.id;
+
+        if(chat.sender=="customer"){
+
+            chatBox.innerHTML += `
+                <div class="customer-message">
+                    <div>${chat.message}</div>
+                    <small>${chat.time}</small>
+                </div>
+            `;
+
+        }else{
+
+            chatBox.innerHTML += `
+                <div class="admin-message">
+                    <div>${chat.message}</div>
+                    <small>${chat.time}</small>
+                </div>
+            `;
+
+        }
+
+    });
+
+    if(chats.length){
+
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+    }
+
+}
+
+// ======================
+// Kirim Pesan
+// ======================
+chatForm.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const message = messageInput.value.trim();
+
+    if(!message) return;
+
+    const res = await fetch(window.location.pathname,{
+
+        method:"POST",
+
+        headers:{
+            "Content-Type":"application/x-www-form-urlencoded"
+        },
+
+        body:new URLSearchParams({
+            message:message
+        })
+
+    });
+
+    const data = await res.json();
+
+    if(data.success){
+
+        messageInput.value = "";
+
+        messageInput.focus();
+
+        loadChat();
+
+    }
+
+});
+
+// Pertama kali
+loadChat();
+
+// Realtime
+setInterval(loadChat,2000);
+
+</script>
+
+</html>

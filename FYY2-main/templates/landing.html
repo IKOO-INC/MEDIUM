@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>HnnyMotion Official</title>
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/landing.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Aurora Background -->
+
+    <div class="aurora">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <!-- Floating Blobs -->
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <!-- Stars -->
+
+    <canvas id="stars"></canvas>
+<div class="floating-vectors">
+
+    <img src="{{ url_for('static', filename='assets/f1.svg') }}" class="fv fv1">
+
+    <img src="{{ url_for('static', filename='assets/f2.svg') }}" class="fv fv2">
+
+    <img src="{{ url_for('static', filename='assets/f3.svg') }}" class="fv fv3">
+
+    <img src="{{ url_for('static', filename='assets/f4.svg') }}" class="fv fv4">
+
+    <img src="{{ url_for('static', filename='assets/f1.svg') }}" class="fv fv5">
+
+</div>
+    <!-- Mouse Glow -->
+
+    <div id="cursorGlow"></div>
+
+    <!-- Navbar -->
+
+    <header>
+
+        <div class="logo">
+
+            HnnyMotion
+
+        </div>
+
+        <nav>
+
+            <a href="/">Home</a>
+
+            <a href="/tracking">
+                Tracking Order
+            </a>
+
+            <a href="#">
+                Portfolio
+            </a>
+
+            <a href="#">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div class="glass">
+
+            <p class="small">
+
+                WELCOME TO
+
+            </p>
+
+            <h1>
+
+                <span>
+
+                    HnnyMotion
+
+                </span>
+
+                Official
+
+            </h1>
+
+            <p class="tagline">
+
+                Built for Greatness.
+
+                Creative Motion Graphic,
+
+                Video Editing,
+
+                Branding,
+
+                and Digital Experience.
+
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    href="https://clicky.id/fyymotion"
+
+                    class="btn">
+
+                    Explore
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Bottom Wave -->
+
+    <div class="wave">
+
+        <svg
+
+            viewBox="0 0 1440 320"
+
+            preserveAspectRatio="none">
+
+            <path
+
+                id="wavePath"
+
+                fill="rgba(255,255,255,.08)"
+
+                d="M0,160L80,180C160,200,320,240,480,230C640,220,800,160,960,150C1120,140,1280,170,1440,190L1440,320L0,320Z">
+
+            </path>
+
+        </svg>
+
+    </div>
+
+    <!-- Scripts -->
+
+    <script
+
+        src="{{ url_for('static', filename='js/landing.js') }}">
+
+    </script>
+
+</body>
+
+</html>

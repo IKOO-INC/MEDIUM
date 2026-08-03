@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Buat Order</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Buat Order Baru</h2>
+
+<form method="POST">
+
+    <label>Nomor Resi</label>
+
+    <div class="resi-group">
+
+        <input
+            type="text"
+            id="tracking_code"
+            name="tracking_code"
+            placeholder="Nomor Resi"
+            required>
+
+        <button
+            type="button"
+            id="generateResi">
+
+            Generate
+
+        </button>
+
+    </div>
+
+
+    <label>Nama Customer</label>
+
+    <input
+        type="text"
+        name="customer_name"
+        placeholder="Nama Customer"
+        required>
+
+
+    <label>Nomor WhatsApp</label>
+
+    <input
+        type="text"
+        name="customer_phone"
+        placeholder="628xxxxxxxxxx"
+        required>
+
+
+    <label>Nama Produk</label>
+
+    <input
+        type="text"
+        name="product_name"
+        placeholder="Nama Produk"
+        required>
+
+
+    <label>Kategori Produk</label>
+
+    <input
+        type="text"
+        name="product_category"
+        placeholder="Contoh : Motion Graphic"
+        required>
+
+
+    <label>Harga</label>
+
+    <input
+        type="number"
+        name="product_price"
+        placeholder="350000"
+        required>
+
+
+    <label>Deskripsi Pesanan</label>
+
+    <textarea
+        name="product_description"
+        rows="4"
+        placeholder="Jelaskan detail pesanan..."></textarea>
+
+
+    <label>Deadline</label>
+
+    <input
+        type="date"
+        name="deadline">
+
+
+    <label>Estimasi Selesai</label>
+
+    <input
+        type="date"
+        name="estimated_finish">
+
+
+    <label>Status Pembayaran</label>
+
+    <select name="payment_status">
+
+        <option value="Belum Lunas">
+            Belum Lunas
+        </option>
+
+        <option value="DP">
+            DP
+        </option>
+
+        <option value="Lunas">
+            Lunas
+        </option>
+
+    </select>
+
+
+    <br>
+
+    <button type="submit">
+
+        Simpan Order
+
+    </button>
+
+</form>
+
+
+{% if message %}
+
+<div class="message">
+
+{{ message }}
+
+</div>
+
+{% endif %}
+
+<br>
+
+<a href="/admin/orders">
+
+← Lihat Semua Order
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function generateResi(){
+
+    const year = new Date().getFullYear().toString().slice(-2);
+
+    const random = Math.floor(Math.random()*900000)+100000;
+
+    document.getElementById("tracking_code").value =
+        `HNY${year}${random}`;
+
+}
+
+generateResi();
+
+document
+.getElementById("generateResi")
+.addEventListener("click",generateResi);
+
+</script>
+
+</body>
+</html>
